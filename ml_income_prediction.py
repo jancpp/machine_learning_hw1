@@ -31,4 +31,21 @@ import seaborn as sns
 # load dataset
 data = pd.read_csv('adult.csv')
 
+# explore dataset
+print(data.columns)
+print(data.shape)
+print(data.describe())
 
+data = data.sample(frac = 0.1, random_state = 1)
+print(data.shape)
+
+# plot historgram for each parameter
+data.hist(figsize = (20, 20))
+plt.show()
+
+# determine if income is over/uner $50k
+Over = data[data['income'] == '<=50K']
+Under = data[data['income'] == '>50K']
+
+print('Income over $50k: {}'.format(len(Over)) + ' samples')
+print('Income under $50k: {}'.format(len(Under)) + ' samples')
