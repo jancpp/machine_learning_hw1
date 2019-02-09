@@ -7,7 +7,7 @@
 """
 
 import sys
-import numpy
+import numpy 
 import pandas
 import matplotlib
 import seaborn
@@ -23,13 +23,18 @@ print('Scipy: {}' .format(scipy.__version__))
 print('Sklearn: {}' .format(sklearn.__version__))
 
 # import packeges
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import numpy as np              # math tools
+import pandas as pd             # import and manage datasets
+import matplotlib.pyplot as plt # plot charts
 
 # load dataset
 data = pd.read_csv('adult.csv')
+X = data.iloc[:, :-1].values # matrix of independent variables
+y = data.iloc[:, 14].values  # dependent variable vector
+
+# split dataset into Test set and Training set
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # explore dataset
 print(data.columns)
@@ -49,3 +54,4 @@ Under = data[data['income'] == '>50K']
 
 print('Income over $50k: {}'.format(len(Over)) + ' samples')
 print('Income under $50k: {}'.format(len(Under)) + ' samples')
+
