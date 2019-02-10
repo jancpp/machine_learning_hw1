@@ -29,6 +29,15 @@ import matplotlib.pyplot as plt # plot charts
 
 # load dataset
 data = pd.read_csv('adult.csv')
+
+# drop data w/o values
+data = data.replace({'?': numpy.nan}).dropna() 
+
+# encode all data to numbers
+from sklearn import preprocessing
+le = preprocessing.LabelEncoder()
+data = data.apply(le.fit_transform)
+
 X = data.iloc[:, :-1].values # matrix of independent variables
 y = data.iloc[:, 14].values  # dependent variable vector
 
@@ -45,13 +54,15 @@ data = data.sample(frac = 0.1, random_state = 1)
 print(data.shape)
 
 # plot historgram for each parameter
-data.hist(figsize = (20, 20))
+data.hist(figsize = (10, 10))
 plt.show()
 
 # determine if income is over/uner $50k
-Over = data[data['income'] == '<=50K']
-Under = data[data['income'] == '>50K']
+Over = data[data['income'] == 0]
+Under = data[data['income'] == 1]
 
 print('Income over $50k: {}'.format(len(Over)) + ' samples')
 print('Income under $50k: {}'.format(len(Under)) + ' samples')
+
+
 
