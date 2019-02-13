@@ -64,4 +64,9 @@ Under50k = data[data['income'] == 1]
 print('Income over $50k: {}'.format(len(Over50k)) + ' samples')
 print('Income under $50k: {}'.format(len(Under50k)) + ' samples')
 
+# scale data
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test =  sc_X.transform(X_test)
 
