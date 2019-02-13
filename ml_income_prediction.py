@@ -58,11 +58,10 @@ data.hist(figsize = (10, 10))
 plt.show()
 
 # determine if income is over/uner $50k
-Over = data[data['income'] == 0]
-Under = data[data['income'] == 1]
+Over50k = data[data['income'] == 0]
+Under50k = data[data['income'] == 1]
 
-print('Income over $50k: {}'.format(len(Over)) + ' samples')
-print('Income under $50k: {}'.format(len(Under)) + ' samples')
-
+print('Income over $50k: {}'.format(len(Over50k)) + ' samples')
+print('Income under $50k: {}'.format(len(Under50k)) + ' samples')
 
 
