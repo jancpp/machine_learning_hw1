@@ -11,10 +11,10 @@ Contributiors: Jan Polzer and Ryan Duckworth
 
 Dataset from https://www.kaggle.com/uciml/adult-census-income
 
-We are trying to predict if a person makes over or under $50000 based on census data
+We are trying to predict if a person makes over or under $50,000 per year, based on census data.
 
 ## Dataset 2: Student success predicton
 
 Dataset from https://www.kaggle.com/uciml/student-alcohol-consumption
 
-We are trying to predict if students are going to have above / under average grades based on theirs alcohol consumption data
+We are trying to predict if students are going to have above / below average grades based on their alcohol consumption data.
