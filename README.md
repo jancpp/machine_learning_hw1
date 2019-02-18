@@ -1,12 +1,20 @@
-# machine_learning_hw1
+# machine_learning_project_1
 
 EECS 738 - Machine learning
-Income predicton
+Due date: 2/18/2019
+
+Contributiors: Jan Polzer and Ryan Duckworth
+
+
+
+## Dataset 1: Income predicton
 
 Dataset from https://www.kaggle.com/uciml/adult-census-income
 
-We are trying to predict from census data if person's income is over or under $50000
+We are trying to predict if a person makes over or under $50000 based on census data
 
-Due date: 2/18/2019
+## Dataset 2: Student success predicton
 
-Jan Polzer and Ryan Duckworth
+Dataset from https://www.kaggle.com/uciml/student-alcohol-consumption
+
+We are trying to predict if students are going to have above / under average grades based on theirs alcohol consumption data
