@@ -1,4 +1,4 @@
-# machine_learning_project_1
+# machine learning project 1
 
 EECS 738 - Machine learning
 Due date: 2/18/2019
